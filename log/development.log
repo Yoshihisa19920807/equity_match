@@ -840,3 +840,706 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 324ms (Views: 321.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_in" for ::1 at 2021-04-20 13:28:12 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (20.3ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (110.1ms)
+Completed 200 OK in 2470ms (Views: 2427.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-20 13:28:33 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pynoV8JEDrcdeLDsSd38V55epV4S55cJfRN1TKSBBhWIwA1rq7pj03jrXEQgOxjZI+ivRia2AYsNfl5Xw4OQOQ==", "user"=>{"email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yoshi19920807@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 10ms (ActiveRecord: 2.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pynoV8JEDrcdeLDsSd38V55epV4S55cJfRN1TKSBBhWIwA1rq7pj03jrXEQgOxjZI+ivRia2AYsNfl5Xw4OQOQ==", "user"=>{"email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.6ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (11.3ms)
+Completed 200 OK in 301ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-20 13:28:48 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ys7BwWk1nuF/FiGwmoFNLxuy+84WvqJIu5xFkQZZLudNJyT9AMvzhRqFzRjzZ6mhpgTx1iLvNMrL8W6KYVu4yw==", "user"=>{"email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yoshi19920807@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ys7BwWk1nuF/FiGwmoFNLxuy+84WvqJIu5xFkQZZLudNJyT9AMvzhRqFzRjzZ6mhpgTx1iLvNMrL8W6KYVu4yw==", "user"=>{"email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.3ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (34.5ms)
+Completed 200 OK in 309ms (Views: 149.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2021-04-20 13:30:19 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (47.2ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_name' for nil:NilClass):
+     5:         = link_to image_tag("techpit-march-icon.png"), users_path
+     6:     .userInfo
+     7:       .userInfo_img
+     8:         = image_tag @user.img_name.url(:thumb)
+     9:       .userInfo_name
+    10:         = @user.name
+    11:       .userInfo_selfIntroduction
+  
+app/views/users/show.html.slim:8:in `_app_views_users_show_html_slim__4209720757374965955_70219415698580'
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200317234332)[0m
+  [1m[35m (4.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200316234738);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-20 05:17:36.789093"], ["updated_at", "2021-04-20 05:17:36.789093"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200317234332)[0m
+  [1m[35m (8.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200316234738);
+
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-20 05:17:36.840772"], ["updated_at", "2021-04-20 05:17:36.840772"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-04-20 05:17:36.849003"], ["key", "environment"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user1@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$11$lJrxocjmz10nv/XIJ0m6guYWSu5YAEd2sKvQZlv1SiOaI2TalEE9m"], ["created_at", "2021-04-20 05:17:39.728866"], ["updated_at", "2021-04-20 05:17:39.728866"], ["name", "オリバー"], ["self_introduction", "オリバーです"], ["img_name", "1.jpg"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user2@example.com"], ["encrypted_password", "$2a$11$lKwXH1/U2W6uHFXE1.k3IePKOGr64QEgTpVeYyaMTcQI7CZglYarm"], ["created_at", "2021-04-20 05:17:40.235127"], ["updated_at", "2021-04-20 05:17:40.235127"], ["name", "ハリー"], ["self_introduction", "ハリーです"], ["img_name", "2.jpg"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user3@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user3@example.com"], ["encrypted_password", "$2a$11$3/6zhCSh6qB8sWqEdrfGcuM0HG3HFQ0opFHBPRRsLeMdz1335th.W"], ["created_at", "2021-04-20 05:17:40.664626"], ["updated_at", "2021-04-20 05:17:40.664626"], ["name", "オリヴィア"], ["self_introduction", "オリヴィアです"], ["sex", 1], ["img_name", "3.jpg"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user4@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user4@example.com"], ["encrypted_password", "$2a$11$PIr/WD3vhittUaR5.mL.l.cV6uAWwHHZlbV7NHKqBuExbwOASBFMC"], ["created_at", "2021-04-20 05:17:41.459164"], ["updated_at", "2021-04-20 05:17:41.459164"], ["name", "リリー"], ["self_introduction", "リリーです"], ["sex", 1], ["img_name", "4.jpg"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/sign_up" for ::1 at 2021-04-20 14:36:47 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__2242250659315968125_70219474782920 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (8.7ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (55.1ms)
+Completed 200 OK in 493ms (Views: 480.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-04-20 14:37:25 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MCpw2FboPUO0++ALfh+lPhhUAOikQsoMPH2JWQMS8kYPqo7HfmVmMLcLFve/M3pei8UR9aPv1RQ0jOq+Vwa1+g==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007fba7329a808 @tempfile=#<Tempfile:/var/folders/7b/5_wd9xf161vgxzzk9t49n6jm0000gn/T/RackMultipart20210420-46098-glzdp1.jpg>, @original_filename="640x640_rect_40893523.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"640x640_rect_40893523.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"yoshi", "email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"testes"}, "commit"=>"はじめる"}
+  [1m[35m (4.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yoshi19920807@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "yoshi19920807@gmail.com"], ["encrypted_password", "$2a$11$0W6y.8YG/Lwo0MAU3IxN2.FHbJ58BiUAh/NRBo6MBYFiQY/t1.KqW"], ["created_at", "2021-04-20 05:37:26.473489"], ["updated_at", "2021-04-20 05:37:26.473489"], ["name", "yoshi"], ["self_introduction", "testes"], ["img_name", "640x640_rect_40893523.jpg"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 625ms (ActiveRecord: 7.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?)):
+  
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:108:in `step'
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:108:in `block in each'
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:107:in `loop'
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:107:in `each'
+activerecord (5.1.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:218:in `to_a'
+activerecord (5.1.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:218:in `block (2 levels) in exec_query'
+activesupport (5.1.7) lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+activesupport (5.1.7) lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+activesupport (5.1.7) lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+activerecord (5.1.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:209:in `block in exec_query'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract_adapter.rb:613:in `block (2 levels) in log'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block in log'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract_adapter.rb:604:in `log'
+activerecord (5.1.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:208:in `exec_query'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `exec_insert'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:133:in `insert'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.1.7) lib/active_record/relation.rb:61:in `insert'
+activerecord (5.1.7) lib/active_record/persistence.rb:583:in `_create_record'
+activerecord (5.1.7) lib/active_record/counter_cache.rb:176:in `_create_record'
+activerecord (5.1.7) lib/active_record/locking/optimistic.rb:69:in `_create_record'
+activerecord (5.1.7) lib/active_record/attribute_methods/dirty.rb:297:in `_create_record'
+activerecord (5.1.7) lib/active_record/callbacks.rb:344:in `block in _create_record'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.7) lib/active_support/callbacks.rb:827:in `_run_create_callbacks'
+activerecord (5.1.7) lib/active_record/callbacks.rb:344:in `_create_record'
+activerecord (5.1.7) lib/active_record/timestamp.rb:102:in `_create_record'
+activerecord (5.1.7) lib/active_record/persistence.rb:554:in `create_or_update'
+activerecord (5.1.7) lib/active_record/callbacks.rb:340:in `block in create_or_update'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.7) lib/active_support/callbacks.rb:827:in `_run_save_callbacks'
+activerecord (5.1.7) lib/active_record/callbacks.rb:340:in `create_or_update'
+activerecord (5.1.7) lib/active_record/persistence.rb:129:in `save'
+activerecord (5.1.7) lib/active_record/validations.rb:44:in `save'
+activerecord (5.1.7) lib/active_record/attribute_methods/dirty.rb:35:in `save'
+activerecord (5.1.7) lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+activerecord (5.1.7) lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+activerecord (5.1.7) lib/active_record/transactions.rb:210:in `transaction'
+activerecord (5.1.7) lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+activerecord (5.1.7) lib/active_record/transactions.rb:308:in `block in save'
+activerecord (5.1.7) lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+activerecord (5.1.7) lib/active_record/transactions.rb:307:in `save'
+activerecord (5.1.7) lib/active_record/suppressor.rb:42:in `save'
+devise (4.7.1) app/controllers/devise/registrations_controller.rb:19:in `create'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.7) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2021-04-20 14:49:07 +0900
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MCpw2FboPUO0++ALfh+lPhhUAOikQsoMPH2JWQMS8kYPqo7HfmVmMLcLFve/M3pei8UR9aPv1RQ0jOq+Vwa1+g==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007fa47b3a5c60 @tempfile=#<Tempfile:/var/folders/7b/5_wd9xf161vgxzzk9t49n6jm0000gn/T/RackMultipart20210420-69128-1lms8zz.jpg>, @original_filename="640x640_rect_40893523.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"640x640_rect_40893523.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"yoshi", "email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"testes"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (9.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yoshi19920807@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (7.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "yoshi19920807@gmail.com"], ["encrypted_password", "$2a$11$HVK6LtCs9omcaiI4Y5000OJToBw55L7u68XyFSGuCI8YRq9amkomK"], ["created_at", "2021-04-20 05:49:08.647597"], ["updated_at", "2021-04-20 05:49:08.647597"], ["name", "yoshi"], ["self_introduction", "testes"], ["img_name", "640x640_rect_40893523.jpg"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 672ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/" for ::1 at 2021-04-20 14:49:08 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (38.2ms)
+Started POST "/users" for ::1 at 2021-04-20 14:49:18 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lBlGuG24awMILxlJjnLudNL9Z8nKQeFRWak93HZybqq78KOEBEYGZ2289eHnlAr6b0tt0f4Qd9MpxBbHEXD4hg==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007fa483b97538 @tempfile=#<Tempfile:/var/folders/7b/5_wd9xf161vgxzzk9t49n6jm0000gn/T/RackMultipart20210420-69128-81nwhm.jpg>, @original_filename="640x640_rect_40893523.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"640x640_rect_40893523.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"yoshi", "email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"testes"}, "commit"=>"はじめる"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 116ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-04-20 14:49:18 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (8.9ms)
+Started GET "/users/sign_in" for ::1 at 2021-04-20 14:49:40 +0900
+Completed 200 OK in 54895ms (Views: 54887.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 44739ms (Views: 44636.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-04-20 14:50:03 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (5.2ms)
+Completed 200 OK in 276ms (Views: 269.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-20 14:50:06 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-04-20 14:50:06 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (6.2ms)
+Completed 200 OK in 224ms (Views: 221.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-20 14:50:20 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-04-20 14:50:20 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (10.9ms)
+Completed 200 OK in 239ms (Views: 235.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2021-04-20 14:50:29 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.slim within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered users/show.html.slim within layouts/application (39.9ms)
+Completed 200 OK in 711ms (Views: 693.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 14:51:15 +0900
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:119:in `process'
+vendor/cache/ruby/2.6.0/gems/actionview-5.1.7/lib/action_view/rendering.rb:30:in `process'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/conditional_get.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/cache/ruby/2.6.0/gems/activerecord-5.1.7/lib/active_record/migration.rb:556:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `call'
+vendor/cache/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/method_override.rb:24:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/engine.rb:522:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:675:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2021-04-20 15:14:57 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 114ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/cache/ruby/2.6.0/gems/activerecord-5.1.7/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+vendor/cache/ruby/2.6.0/gems/actionview-5.1.7/lib/action_view/rendering.rb:30:in `process'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/conditional_get.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/cache/ruby/2.6.0/gems/activerecord-5.1.7/lib/active_record/migration.rb:556:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/cache/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `call'
+vendor/cache/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/method_override.rb:24:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.1.7/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.1.7/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.1.7/lib/rails/engine.rb:522:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:675:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.4/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2021-04-20 15:21:33 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (13.5ms)
+Completed 200 OK in 345ms (Views: 312.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 15:24:48 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (7.6ms)
+Completed 200 OK in 303ms (Views: 253.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1" for ::1 at 2021-04-20 15:24:52 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered users/show.html.slim within layouts/application (24.1ms)
+Completed 200 OK in 162ms (Views: 154.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 15:31:29 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (29.1ms)
+Completed 200 OK in 11779ms (Views: 11762.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/5" for ::1 at 2021-04-20 15:32:05 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.slim within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered users/show.html.slim within layouts/application (26.4ms)
+Completed 200 OK in 328ms (Views: 296.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/edit" for ::1 at 2021-04-20 15:32:14 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.slim within layouts/application
+  Rendered devise/registrations/edit.html.slim within layouts/application (238.1ms)
+Completed 200 OK in 407ms (Views: 403.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users" for ::1 at 2021-04-20 15:32:25 +0900
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/7VbRVLU9S3sGPcIh5Azr0wc1GDhD5lYT/hFto1Skll07bSQIMeahZNSIfT2c0iXiS5PJ4ABWCEgzruTds2AqA==", "user"=>{"name"=>"yoshi", "self_introduction"=>"testes", "sex"=>"男", "img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007fa4800c6878 @tempfile=#<Tempfile:/var/folders/7b/5_wd9xf161vgxzzk9t49n6jm0000gn/T/RackMultipart20210420-69128-1qn06n7.png>, @original_filename="2b388c928bc01076c8bfbe2150637d03.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"2b388c928bc01076c8bfbe2150637d03.png\"\r\nContent-Type: image/png\r\n">, "current_password"=>"[FILTERED]"}, "commit"=>"更新"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.slim within layouts/application
+  Rendered devise/registrations/edit.html.slim within layouts/application (13.5ms)
+Completed 200 OK in 851ms (Views: 210.0ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/users" for ::1 at 2021-04-20 15:32:47 +0900
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LUUK9cLKr2xezCzGGi98Bd+O69zQTYWIzS8UoZOgw2ECrO/JqzTCCDtfwG5zyZiLYjjhxOQcEwq9Qj+69KJVTQ==", "user"=>{"name"=>"yoshi", "self_introduction"=>"testest", "sex"=>"男", "img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007fa4861a59a0 @tempfile=#<Tempfile:/var/folders/7b/5_wd9xf161vgxzzk9t49n6jm0000gn/T/RackMultipart20210420-69128-1u05l2y.png>, @original_filename="2b388c928bc01076c8bfbe2150637d03.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"2b388c928bc01076c8bfbe2150637d03.png\"\r\nContent-Type: image/png\r\n">, "current_password"=>"[FILTERED]"}, "commit"=>"更新"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.6ms)[0m  [1m[33mUPDATE "users" SET "self_introduction" = ?, "img_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["self_introduction", "testest"], ["img_name", "2b388c928bc01076c8bfbe2150637d03.png"], ["updated_at", "2021-04-20 06:32:48.617797"], ["id", 5]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 781ms (ActiveRecord: 25.3ms)
+
+
+Started GET "/" for ::1 at 2021-04-20 15:32:48 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (15.2ms)
+Completed 200 OK in 380ms (Views: 371.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-20 15:32:51 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 15:32:51 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (29.1ms)
+Completed 200 OK in 221ms (Views: 209.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/5" for ::1 at 2021-04-20 15:32:55 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered users/show.html.slim within layouts/application (18.4ms)
+Completed 200 OK in 327ms (Views: 320.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-20 15:33:03 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jOO7Xd35ThLNiFqIogG3iPJ8ExKJi8N4BEXv+rNkehmjCl5htAcjdqgbtiDL51MGT8oZCr3aVfp0KMTh1GbsNQ=="}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2021-04-20 15:33:03 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (6.2ms)
+Completed 200 OK in 216ms (Views: 210.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-20 15:33:05 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (8.3ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (40.0ms)
+Completed 200 OK in 221ms (Views: 219.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-20 15:33:14 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nEfzozKh5DTvOEV8bpQQfk1LODPGzdhBPH5UlIQlhyN8ySSKsdkUFbkZPtGHYBwzRNsVQrNXXKEAsFJXPUAjwA==", "user"=>{"email"=>"yoshi19920807@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yoshi19920807@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 191ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 15:33:14 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (20.3ms)
+Completed 200 OK in 177ms (Views: 169.8ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReactions (20210420113806)
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReactions (20210420113806)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "reactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "to_user_id" integer NOT NULL, "from_user_id" integer NOT NULL, "status" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (38.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210420113806"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users" for ::1 at 2021-04-20 22:40:19 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (76.7ms)
+Completed 200 OK in 891ms (Views: 656.2ms | ActiveRecord: 6.3ms)
+
+
