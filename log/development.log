@@ -1543,3 +1543,297 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 891ms (Views: 656.2ms | ActiveRecord: 6.3ms)
 
 
+Started GET "/users" for ::1 at 2021-04-20 22:58:39 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (17219.2ms)
+Completed 200 OK in 17637ms (Views: 17593.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 22:59:13 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (14.9ms)
+Completed 200 OK in 161ms (Views: 152.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 22:59:32 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (14.4ms)
+Completed 200 OK in 120ms (Views: 112.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 22:59:36 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (24.3ms)
+Completed 200 OK in 151ms (Views: 141.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 22:59:39 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (9.6ms)
+Completed 200 OK in 107ms (Views: 100.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 22:59:42 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (23.1ms)
+Completed 200 OK in 146ms (Views: 140.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 22:59:50 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (25.0ms)
+Completed 200 OK in 142ms (Views: 134.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:09:48 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (27.5ms)
+Completed 200 OK in 213ms (Views: 206.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:10:03 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (718.8ms)
+Completed 200 OK in 1006ms (Views: 938.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:12:27 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (13.8ms)
+Completed 200 OK in 110ms (Views: 104.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:12:29 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (19.7ms)
+Completed 200 OK in 115ms (Views: 109.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:12:32 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (14.0ms)
+Completed 200 OK in 118ms (Views: 111.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:12:35 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (16.2ms)
+Completed 200 OK in 127ms (Views: 120.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:14:08 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (13.2ms)
+Completed 200 OK in 129ms (Views: 120.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:14:20 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (724.5ms)
+Completed 200 OK in 1191ms (Views: 1095.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:14:56 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (730.7ms)
+Completed 200 OK in 1066ms (Views: 984.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:16:51 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (39.0ms)
+Completed 200 OK in 161ms (Views: 156.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:18:47 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (1152.2ms)
+Completed 200 OK in 1520ms (Views: 1405.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:19:10 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (15.7ms)
+Completed 200 OK in 116ms (Views: 110.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:19:11 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (18.7ms)
+Completed 200 OK in 172ms (Views: 165.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:19:12 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (14.3ms)
+Completed 200 OK in 126ms (Views: 115.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:19:13 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (20.9ms)
+Completed 200 OK in 146ms (Views: 140.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:20:19 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (768.2ms)
+Completed 200 OK in 1030ms (Views: 975.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:21:35 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (16.3ms)
+Completed 200 OK in 120ms (Views: 113.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:23:02 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (21.8ms)
+Completed 200 OK in 271ms (Views: 262.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:25:41 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.slim within layouts/application (1177.5ms)
+Completed 200 OK in 1682ms (Views: 1631.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2021-04-20 23:29:45 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 5]]
+  Rendered users/index.html.erb within layouts/application (1128.0ms)
+Completed 200 OK in 1789ms (Views: 1711.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/reactions" for ::1 at 2021-04-20 23:36:43 +0900
+Processing by ReactionsController#create as */*
+  Parameters: {"user_id"=>"4", "reaction"=>"like"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReaction Load (0.2ms)[0m  [1m[34mSELECT  "reactions".* FROM "reactions" WHERE "reactions"."to_user_id" = ? AND "reactions"."from_user_id" = ? LIMIT ?[0m  [["to_user_id", 4], ["from_user_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "reactions" ("to_user_id", "from_user_id", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["to_user_id", 4], ["from_user_id", 5], ["status", 0], ["created_at", "2021-04-20 14:36:43.143813"], ["updated_at", "2021-04-20 14:36:43.143813"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+No template found for ReactionsController#create, rendering head :no_content
+Completed 204 No Content in 111ms (ActiveRecord: 7.1ms)
+
+
+Started POST "/reactions" for ::1 at 2021-04-20 23:37:09 +0900
+Processing by ReactionsController#create as */*
+  Parameters: {"user_id"=>"3", "reaction"=>"dislike"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReaction Load (0.5ms)[0m  [1m[34mSELECT  "reactions".* FROM "reactions" WHERE "reactions"."to_user_id" = ? AND "reactions"."from_user_id" = ? LIMIT ?[0m  [["to_user_id", 3], ["from_user_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "reactions" ("to_user_id", "from_user_id", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["to_user_id", 3], ["from_user_id", 5], ["status", 1], ["created_at", "2021-04-20 14:37:09.402124"], ["updated_at", "2021-04-20 14:37:09.402124"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+No template found for ReactionsController#create, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 5.7ms)
+
+
+Started POST "/reactions" for ::1 at 2021-04-20 23:37:10 +0900
+Processing by ReactionsController#create as */*
+  Parameters: {"user_id"=>"2", "reaction"=>"like"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReaction Load (0.3ms)[0m  [1m[34mSELECT  "reactions".* FROM "reactions" WHERE "reactions"."to_user_id" = ? AND "reactions"."from_user_id" = ? LIMIT ?[0m  [["to_user_id", 2], ["from_user_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "reactions" ("to_user_id", "from_user_id", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["to_user_id", 2], ["from_user_id", 5], ["status", 0], ["created_at", "2021-04-20 14:37:10.572221"], ["updated_at", "2021-04-20 14:37:10.572221"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+No template found for ReactionsController#create, rendering head :no_content
+Completed 204 No Content in 140ms (ActiveRecord: 5.6ms)
+
+
+  [1m[36mReaction Load (4.2ms)[0m  [1m[34mSELECT  "reactions".* FROM "reactions" LIMIT ?[0m  [["LIMIT", 11]]
