@@ -1,0 +1,842 @@
+Started GET "/" for ::1 at 2020-03-17 08:03:32 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (7.3ms)
+Completed 200 OK in 749ms (Views: 30.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:03:42 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1643ms (Views: 1634.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:37:01 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 127ms (Views: 118.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:42:16 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 24.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:43:59 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 107ms (Views: 100.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:44:18 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 13.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:45:51 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb
+  Rendered top/index.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 14.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200316234738)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200316234738"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-16 23:48:07.379471"], ["updated_at", "2020-03-16 23:48:07.379471"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for ::1 at 2020-03-17 08:49:11 +0900
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007f8deba25398>):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-03-17 08:49:32 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 698ms (Views: 679.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:50:04 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-17 08:50:15 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (141.7ms)
+Completed 200 OK in 398ms (Views: 317.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-18 08:04:00 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/config
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/images
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/node_modules):
+     5:     title.alert.alert-info
+     6:       | EquityMatch
+     7:     = csrf_meta_tags
+     8:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     9:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    10:   body.alert.alert-danger
+    11:     - if flash[:notice]
+  
+app/assets/stylesheets/application.scss:19
+app/views/layouts/application.html.slim:8:in `_app_views_layouts_application_html_slim___2491859652987134479_70211580003160'
+Started GET "/" for ::1 at 2020-03-18 08:05:04 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/config
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/images
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/node_modules):
+     5:     title.alert.alert-info
+     6:       | EquityMatch
+     7:     = csrf_meta_tags
+     8:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     9:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    10:   body.alert.alert-danger
+    11:     - if flash[:notice]
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.slim:8:in `_app_views_layouts_application_html_slim___2491859652987134479_70211527917220'
+Started GET "/" for ::1 at 2020-03-18 08:06:36 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 8472ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'iquery3' with type 'application/javascript'
+Checked in these paths: 
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/config
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/images
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/node_modules
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/popper_js-1.16.0/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/javascripts):
+     5:     title.alert.alert-info
+     6:       | EquityMatch
+     7:     = csrf_meta_tags
+     8:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     9:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    10:   body.alert.alert-danger
+    11:     - if flash[:notice]
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.slim:8:in `_app_views_layouts_application_html_slim__3545266906216309455_70139977523020'
+Started GET "/" for ::1 at 2020-03-18 08:07:04 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1031ms (Views: 1013.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-18 08:07:26 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (153.9ms)
+Completed 200 OK in 459ms (Views: 390.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-18 08:07:44 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h3/jtqLwEM8KfmVPEyM2p3HL4l0EdpuKDx4ezd3HXrhOe3wgiIcsrT6zKRKB5WnZBDqyMDJ2ZszCztszJ+eI1A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h3/jtqLwEM8KfmVPEyM2p3HL4l0EdpuKDx4ezd3HXrhOe3wgiIcsrT6zKRKB5WnZBDqyMDJ2ZszCztszJ+eI1A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 142ms (Views: 126.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-18 08:08:54 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 175ms (Views: 173.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-18 08:08:56 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5FKI/+U3MZaypaTnvXADM/KWoq4844PoHdPo1Lg5ZIgtVhdpz0AN9IZo6LovtlxNh2fywwrjfq7QAy0qQhmy5A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5FKI/+U3MZaypaTnvXADM/KWoq4844PoHdPo1Lg5ZIgtVhdpz0AN9IZo6LovtlxNh2fywwrjfq7QAy0qQhmy5A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 338ms (Views: 336.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-18 08:35:39 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 3483ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: font-awesome-sprockets.
+Load paths:
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/config
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/images
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/node_modules
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/popper_js-1.16.0/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets):
+     5:     title
+     6:       | EquityMatch
+     7:     = csrf_meta_tags
+     8:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     9:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    10:   body
+    11:     - if flash[:notice]
+  
+app/assets/stylesheets/application.scss:20
+app/views/layouts/application.html.slim:8:in `_app_views_layouts_application_html_slim__3545266906216309455_70140039680940'
+Started GET "/" for ::1 at 2020-03-18 08:36:45 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 1815ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: font-awesome-sprockets.
+Load paths:
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/config
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/images
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/app/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yoshihisaokada/Projects/equity_match/node_modules
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/popper_js-1.16.0/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/javascripts
+  /Users/yoshihisaokada/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets):
+     5:     title
+     6:       | EquityMatch
+     7:     = csrf_meta_tags
+     8:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     9:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    10:   body
+    11:     - if flash[:notice]
+  
+app/assets/stylesheets/application.scss:20
+app/views/layouts/application.html.slim:8:in `_app_views_layouts_application_html_slim__3545266906216309455_70140057012180'
+Started GET "/" for ::1 at 2020-03-18 08:37:04 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (29.3ms)
+Started GET "/" for ::1 at 2020-03-18 08:37:07 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (4.9ms)
+Completed 200 OK in 16630ms (Views: 16626.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 20501ms (Views: 20445.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-18 08:40:09 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (138.3ms)
+Completed 200 OK in 324ms (Views: 291.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-18 08:40:13 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (5.2ms)
+Completed 200 OK in 138ms (Views: 131.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToUser (20200317234332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar(100) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "self_introduction" varchar(500)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users" ADD "sex" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "img_name" varchar[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200317234332"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users/sign_in" for ::1 at 2020-03-19 08:12:01 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 631ms (Views: 589.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-19 08:12:06 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 211ms (Views: 207.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-03-19 08:12:14 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XRfXoT/0EMY+L74Dtaenis8UOXH2h+NUbIzCZ9B+leTyAdDkintU30eVpuvKO3sCenEHU/BnrPbfqsgXEQPWsQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (3.3ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 201ms (Views: 145.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-23 08:29:29 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.slim within layouts/application
+  Rendered top/index.html.slim within layouts/application (290.0ms)
+Completed 200 OK in 3259ms (Views: 2960.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for ::1 at 2020-03-23 08:29:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:30:08 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from _app_views_devise_registrations_new_html_slim__1436753988036703409_70181390875460 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/registrations/new.html.slim within layouts/application (7728.8ms)
+Completed 500 Internal Server Error in 8043ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fa8c5a2bb90>:0x00007fa8c1bf4b38>):
+     9:       .userProfileImg_description
+    10:         | 画像をアップロード
+    11:       i.fas.fa_camera.fa-3x
+    12:       = f.file_field :img_name,id:"file_photo"
+    13:     #userImgPreview.userImgPreview
+    14:       img#thumbnail.userImgPreview_content[accept="image/*" src=""]
+  
+app/views/devise/registrations/new.html.slim:12:in `_app_views_devise_registrations_new_html_slim__1436753988036703409_70181390875460'
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:35:11 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181432116800 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (110.7ms)
+Completed 200 OK in 11895ms (Views: 11893.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:36:05 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181393726640 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (17.5ms)
+Completed 200 OK in 9300ms (Views: 9298.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:36:53 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181361435220 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (26.7ms)
+Completed 200 OK in 9451ms (Views: 9449.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:42:21 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181338223860 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (585.3ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (614.5ms)
+Completed 500 Internal Server Error in 659ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `k_to' for #<#<Class:0x00007fa8c5a2bb90>:0x00007fa8bfe6a540>):
+    1: - if controller_name != 'sessions'
+    2:   .linkToLogin
+    3:     = li k_to "Log in", new_session_path(resource_name)
+    4:   br
+    5: - if devise_mapping.registerable? && controller_name != 'registrations'
+    6:   = link_to "Sign up", new_registration_path(resource_name)
+  
+app/views/devise/shared/_links.html.slim:3:in `_app_views_devise_shared__links_html_slim__277789553711058166_70181375660700'
+app/views/devise/registrations/new.html.slim:58:in `block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181338223860'
+app/views/devise/registrations/new.html.slim:6:in `_app_views_devise_registrations_new_html_slim__1436753988036703409_70181338223860'
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:42:56 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181380670620 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (6.4ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (26.6ms)
+Completed 200 OK in 9584ms (Views: 9581.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:43:42 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181391820940 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (8.9ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (39.8ms)
+Completed 200 OK in 7358ms (Views: 7355.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:44:08 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181328855160 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (8.8ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (41.4ms)
+Completed 200 OK in 334ms (Views: 332.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:44:21 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181382083760 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (7.7ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (29.8ms)
+Completed 200 OK in 8038ms (Views: 8036.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:44:59 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181395390340 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (6.5ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (32.2ms)
+Completed 200 OK in 394ms (Views: 392.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:45:49 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181389453580 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (6.5ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (26.9ms)
+Completed 200 OK in 237ms (Views: 234.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:46:13 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181426613820 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (10.9ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (41.2ms)
+Completed 200 OK in 245ms (Views: 242.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-23 08:47:09 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181408823940 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (8.4ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (36.1ms)
+Completed 200 OK in 318ms (Views: 316.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-24 07:55:17 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181412029620 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (21.2ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (324.2ms)
+Completed 200 OK in 1384ms (Views: 1271.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-24 07:58:58 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181406673640 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (9.7ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (36.8ms)
+Completed 200 OK in 275ms (Views: 273.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-24 08:01:29 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181395464260 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (7.4ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (46.6ms)
+Completed 200 OK in 336ms (Views: 333.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-24 08:02:54 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181394567880 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (5.1ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (23.8ms)
+Completed 200 OK in 11599ms (Views: 11596.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-03-24 08:03:23 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_slim__1436753988036703409_70181394928840 at /Users/yoshihisaokada/Projects/equity_match/app/views/devise/registrations/new.html.slim:7)
+  Rendered devise/shared/_links.html.slim (14.5ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (50.9ms)
+Completed 200 OK in 248ms (Views: 245.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:07:01 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.slim (15.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 16310ms (Views: 16305.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:07:17 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.slim (9.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 317ms (Views: 315.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:09:19 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.slim (4.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 230ms (Views: 228.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:27:59 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (15.6ms)
+Completed 200 OK in 453ms (Views: 450.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:30:00 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (37.6ms)
+Completed 200 OK in 391ms (Views: 389.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:30:26 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (12.8ms)
+Completed 200 OK in 191ms (Views: 188.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:31:05 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (12.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (42.9ms)
+Completed 200 OK in 563ms (Views: 560.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:51:08 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (15.2ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (37.9ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `registrable?' for #<Devise::Mapping:0x00007fa8c44e8ad0>
+Did you mean?  registerable?):
+     6: /   = link_to "Sign up", new_registration_path(resource_name)
+     7:   br
+     8: 
+     9: - if devise_mapping.registrable? && controller_name != 'registrations'
+    10:   .linkToLogin
+    11:     = link_to "アカウント作成はこちら", new_registratio_path(resource_name)
+    12:   br
+  
+app/views/devise/shared/_links.html.slim:9:in `_app_views_devise_shared__links_html_slim__277789553711058166_70181362648560'
+app/views/devise/sessions/new.html.slim:21:in `block in _app_views_devise_sessions_new_html_slim___210788676600470766_70181361484060'
+app/views/devise/sessions/new.html.slim:7:in `_app_views_devise_sessions_new_html_slim___210788676600470766_70181361484060'
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:51:37 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (784.7ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (802.1ms)
+Completed 500 Internal Server Error in 844ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_registratio_path' for #<#<Class:0x00007fa8c6b21558>:0x00007fa8c3e011e0>
+Did you mean?  new_registration_path
+               new_registration_url):
+     8: 
+     9: - if devise_mapping.registerable? && controller_name != 'registrations'
+    10:   .linkToLogin
+    11:     = link_to "アカウント作成はこちら", new_registratio_path(resource_name)
+    12:   br
+    13: 
+    14: - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+  
+app/views/devise/shared/_links.html.slim:11:in `_app_views_devise_shared__links_html_slim__277789553711058166_70181409098240'
+app/views/devise/sessions/new.html.slim:21:in `block in _app_views_devise_sessions_new_html_slim___210788676600470766_70181431072940'
+app/views/devise/sessions/new.html.slim:7:in `_app_views_devise_sessions_new_html_slim___210788676600470766_70181431072940'
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:51:53 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.9ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (13.0ms)
+Completed 200 OK in 9737ms (Views: 9735.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:54:20 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.2ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (15.5ms)
+Completed 200 OK in 337ms (Views: 334.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:55:00 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (11.1ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (32.2ms)
+Completed 200 OK in 322ms (Views: 319.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-24 08:56:23 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (9.6ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (30.3ms)
+Completed 200 OK in 324ms (Views: 321.4ms | ActiveRecord: 0.0ms)
+
+
